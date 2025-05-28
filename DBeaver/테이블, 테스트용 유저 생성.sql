@@ -1,0 +1,9 @@
+CREATE TABLE users (
+	id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	username VARCHAR2(50) NOT NULL UNIQUE,
+	password VARCHAR2(100) NOT NULL
+);
+
+-- 테스트용 유저
+INSERT INTO users (username, password) VALUES ('admin', '1234');
+COMMIT;
