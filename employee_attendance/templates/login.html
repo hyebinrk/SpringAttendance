@@ -1,0 +1,24 @@
+<!-- templates/login.html -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직원 로그인</title>
+ </head>
+ <body>
+    <h2>직원 로그인</h2>
+
+    <!-- Flask에서 HTML로 변수를 넘겨줌 -->
+    <!-- 로그인 실패시 Flask가 에러메세지를 넘겨줌 -->
+    {% if error %}
+        <p style="color:rgb(253, 121, 121)";>{{‼️ error발생 ‼️}}</p>
+    {% endif %}
+
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="아이디"><br><br>
+        <input type="text" name="password" placeholder="비밀번호"><br><br>
+        <button type="submit">로그인</button>
+    </form>
+ </body>
+ </html>
